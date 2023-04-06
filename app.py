@@ -4,13 +4,15 @@
 
 import os
 from flask import (Flask, redirect, render_template, request,
-                   send_from_directory, url_for)
+                   send_from_directory, url_for, CORS, cross_origin)
 
 # =============================================================================
 # constants
 # =============================================================================
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 api_data = None
 
