@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6a3941e3-1fda-4f68-aa96-9273726af7a1/resourceGroups/pyf-res/providers/Microsoft.Web/sites/pyfapp",
+    "appService.deploySubpath": "."
+}
