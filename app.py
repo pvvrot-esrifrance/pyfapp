@@ -4,7 +4,8 @@
 
 import os
 from flask import (Flask, redirect, render_template, request,
-                   send_from_directory, url_for, CORS, cross_origin)
+                   send_from_directory, url_for)
+from flask_cors import CORS, cross_origin
 
 # =============================================================================
 # constants
@@ -32,7 +33,7 @@ def favicon():
         "favicon.ico", mimetype="image/vnd.microsoft.icon"
     )
 
-@app.route("/hello", methods=["POST"])
+@app.route("/hello", methods=["OPTIONS", "POST"])
 def hello():
    name = request.form.get("name")
 
